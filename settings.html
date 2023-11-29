@@ -1,0 +1,1202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sidebar</title>
+    <!-- font awesome icon cdn links -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+
+    <!-- box icon cdn links -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- <link rel="stylesheet" href="css/bootstrap.icon.css"> -->
+
+    <!-- chart js file import  -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- bootstrap css files import -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- custom css files import -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="main-container">
+
+        <!-- #################################################
+        ########### Navbar section area start ###############
+        ####################################################### -->
+        <div class="navbar bg-light text-dark">
+            <div class="d-flex justify-content-between align-items-center w-100">
+                <div class="h-full">
+                    <span id="sidebar-toggle" class="d-lg-none  d-block">
+                        <i class="fa-solid fa-bars"></i>
+                        <!-- <i class="bi bi-list"></i> -->
+                    </span>
+                </div>
+                <div class="navbar-content">
+
+
+                    <div class="d-flex align-items-center">
+                        <!-- <div class="dropdown d-inline-block d-lg-none ms-2">
+                            <button type="button" class="btn header-item noti-icon waves-effect"
+                                id="page-header-search-dropdown" data-bs-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
+                                <i class="fa-solid fa-magnifying-glass text-black "></i>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0"
+                                aria-labelledby="page-header-search-dropdown">
+                                <form class="p-3">
+                                    <div class="mb-3 m-0">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" placeholder="Search ...">
+                                            <div class="input-group-append">
+                                                <button class="btn btn-primary" type="submit">
+                                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div> -->
+
+                        <!-- search icon box  -->
+
+                        <div class="search-bar">
+                            <div class="search-icon">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </div>
+                            <div class="search-input">
+                                <input type="search" placeholder="Search" id="myInputSearch" />
+                            </div>
+                            <button class="search_btn">Search</button>
+                        </div>
+                        <!-- <div class="dropdown d-none d-sm-inline-block">
+                            <button type="button" class="btn header-item waves-effect" data-bs-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0 bg-transparent border-0 "
+                                aria-labelledby="page-header-search-dropdown">
+                                <form class="p-3">
+                                    <div class="mb-3 m-0">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" placeholder="Search ...">
+                                            <div class="input-group-append">
+                                                <button class="btn btn-info text-white " type="submit">
+                                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div> -->
+
+
+                        <!-- language  -->
+                        <div class="dropdown d-none d-sm-inline-block">
+                            <button type="button" class="btn header-item waves-effect" data-bs-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                <img class="" src="img/flags/us.jpg" alt="Header Language" height="16">
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-end">
+
+                                <!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                    <img src="img/flags/spain.jpg" alt="user-image" class="me-1" height="12">
+                                    <span class="align-middle">Spanish</span>
+                                </a>
+
+                                <!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                    <img src="img/flags/germany.jpg" alt="user-image" class="me-1" height="12">
+                                    <span class="align-middle">German</span>
+                                </a>
+
+                                <!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                    <img src="img/flags/italy.jpg" alt="user-image" class="me-1" height="12">
+                                    <span class="align-middle">Italian</span>
+                                </a>
+
+                                <!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                    <img src="img/flags/russia.jpg" alt="user-image" class="me-1" height="12">
+                                    <span class="align-middle">Russian</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- app  -->
+                        <div class="dropdown d-none d-lg-inline-block ms-1">
+                            <button type="button" class="btn header-item noti-icon waves-effect"
+                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class='bx bx-grid-alt'></i>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end">
+                                <div class="px-lg-2 py-3">
+                                    <div class="row mb-3 gy-3">
+                                        <div class="col-4 dropdown-item-icon">
+                                            <div class="d-flex flex-column justify-content-center align-items-center ">
+                                                <i class="fa-brands fa-github"></i>
+                                                <span>Github</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 dropdown-item-icon">
+                                            <div class="d-flex flex-column justify-content-center align-items-center">
+                                                <i class="fa-brands fa-facebook"></i>
+                                                <span>Facebook</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 dropdown-item-icon">
+                                            <div class="d-flex flex-column justify-content-center align-items-center">
+                                                <i class="fa-brands fa-github"></i>
+                                                <span>Github</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4 dropdown-item-icon">
+                                            <div class="d-flex flex-column justify-content-center  align-items-center ">
+                                                <i class="fa-brands fa-whatsapp"></i>
+                                                <span>Whatsapp</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 dropdown-item-icon">
+                                            <div class="d-flex flex-column justify-content-center align-items-center">
+                                                <i class="fa-brands fa-github"></i>
+                                                <span>Github</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 dropdown-item-icon">
+                                            <div class="d-flex flex-column justify-content-center align-items-center">
+                                                <i class="fa-brands fa-github"></i>
+                                                <span>Github</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- <div class="px-lg-2">
+                            <div class="row g-0">
+                                <div class="col-4">
+                                    <a class="dropdown-item" href="#">
+                                        <i class="fa-brands fa-github"></i>
+                                        <span>GitHub</span>
+                                    </a>
+                                </div>
+                                <div class="col-4">>
+                                    <a class="dropdown-item" href="#">
+                                        <img src="img/brands/bitbucket.png" alt="bitbucket">
+                                        <span>Bitbucket</span>
+                                    </a>
+                                </div>
+                                <div class="col-4">>
+                                    <a class="dropdown-icon-item" href="#">
+                                        <img src="img/brands/dribbble.png" alt="dribbble">
+                                        <span>Dribbble</span>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="row g-0">
+                                <div class="col-4">>
+                                    <a class="dropdown-icon-item" href="#">
+                                        <img src="img/brands/dropbox.png" alt="dropbox">
+                                        <span>Dropbox</span>
+                                    </a>
+                                </div>
+                                <div class="col-4">>
+                                    <a class="dropdown-icon-item" href="#">
+                                        <img src="img/brands/mail_chimp.png" alt="mail_chimp">
+                                        <span>Mail Chimp</span>
+                                    </a>
+                                </div>
+                                <div class="col-4">>
+                                    <a class="dropdown-icon-item" href="#">
+                                        <img src="img/brands/slack.png" alt="slack">
+                                        <span>Slack</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div> -->
+
+                        <!-- <div class="dropdown d-none d-lg-inline-block ms-1">
+                            <button type="button" class="btn header-item noti-icon waves-effect"
+                                data-toggle="fullscreen">
+                                <i class="ri-fullscreen-line"></i>
+                            </button>
+                        </div> -->
+
+                        <!-- notification  -->
+                        <div class="dropdown d-inline-block">
+                            <button type="button" class="btn header-item noti-icon waves-effect"
+                                id="page-header-notifications-dropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fa-solid fa-bell fs-5"></i>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0"
+                                aria-labelledby="page-header-notifications-dropdown">
+                                <div class="p-3">
+                                    <div class="row align-items-center">
+                                        <div class="col">
+                                            <h6 class="m-0"> Notifications </h6>
+                                        </div>
+                                        <div class="col-auto">
+                                            <a href="#!" class="small"> View All</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="px-3">
+                                    <div class="notification-item">
+                                        <a href="" class="text-reset notification-item">
+                                            <div class="d-flex">
+                                                <div class="me-3">
+                                                    <i
+                                                        class="fa-solid fa-cart-shopping bg-info text-white p-2 rounded-circle"></i>
+                                                </div>
+                                                <div class="flex-1">
+                                                    <h6 class="mb-1">Your order is placed</h6>
+                                                    <div class="font-size-12 text-muted">
+                                                        <p class="mb-1">If several languages coalesce the grammar</p>
+                                                        <p class="mb-0"><i class="mdi mdi-clock-outline"></i> 3 min ago
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <hr>
+                                    <div class="notification-item">
+                                        <a href="" class="text-reset notification-item">
+                                            <div class="d-flex">
+                                                <img src="img/user.png" height="30px"
+                                                    class="me-3 rounded-circle avatar-xs" alt="user-pic">
+                                                <div class="flex-1">
+                                                    <h6 class="mb-1">James Lemire</h6>
+                                                    <div class="font-size-12 text-muted">
+                                                        <p class="mb-1">It will seem like simplified English.</p>
+                                                        <p class="mb-0"><i class="mdi mdi-clock-outline"></i> 1 hours
+                                                            ago
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <hr>
+                                    <div class="notification-item mb-3">
+                                        <a href="" class="text-reset notification-item">
+                                            <div class="d-flex">
+                                                <div class="avatar-xs me-3">
+                                                    <i
+                                                        class="fa-solid fa-circle-check bg-primary text-white p-2 rounded-circle"></i>
+                                                </div>
+                                                <div class="flex-1">
+                                                    <h6 class="mb-1">Your item is shipped</h6>
+                                                    <div class="font-size-12 text-muted">
+                                                        <p class="mb-1">If several languages coalesce the grammar</p>
+                                                        <p class="mb-0"><i class="mdi mdi-clock-outline"></i> 3 min ago
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="p-2 border-top">
+                                    <div class="d-grid">
+                                        <a class="btn btn-sm btn-link font-size-14 text-center"
+                                            href="javascript:void(0)">
+                                            <i class="mdi mdi-arrow-right-circle me-1"></i> View More..
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <!-- user  -->
+                        <div class="dropdown d-inline-block user-dropdown">
+                            <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown"
+                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <img class="rounded-circle header-profile-user" src="img/user.png" height="40px"
+                                    alt="Header Avatar">
+                                <span class="d-none d-xl-inline-block ms-1">Olivia</span>
+                                <i class="fa-solid fa-chevron-down d-none d-xl-inline-block"></i>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-end">
+                                <!-- item-->
+                                <a class="dropdown-item" href="#"><i class="ri-user-line align-middle me-1"></i>
+                                    Profile</a>
+                                <a class="dropdown-item" href="#"><i class="ri-wallet-2-line align-middle me-1"></i> My
+                                    Wallet</a>
+                                <a class="dropdown-item d-block" href="#"><span
+                                        class="badge bg-success float-end mt-1">11</span><i
+                                        class="ri-settings-2-line align-middle me-1"></i> Settings</a>
+                                <a class="dropdown-item" href="#"><i class="ri-lock-unlock-line align-middle me-1"></i>
+                                    Lock
+                                    screen</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item text-danger" href="#"><i
+                                        class="ri-shut-down-line align-middle me-1 text-danger"></i> Logout</a>
+                            </div>
+                        </div>
+
+                        <!-- <div class="dropdown d-inline-block">
+                            <button type="button" class="btn header-item noti-icon right-bar-toggle waves-effect">
+                                <i class="ri-settings-2-line"></i>
+                            </button>
+                        </div> -->
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- #################################################
+        ########### Navbar section area End ###############
+        ####################################################### -->
+
+
+        <!-- #################################################
+        ########### Sidebar area start ###############
+        ####################################################### -->
+        <div class="sidebar">
+            <div id="sidebar_logo">
+                <span> <i class="fa-solid fa-chart-simple"></i></span>
+                <h4> WB</h4>
+            </div>
+            <!-- <span id="toggle2"><i class="fa-solid fa-bars"></i></span> -->
+            <div class="menu_btn">
+                <div id="sidebar-toggle2"><i class="fa-solid fa-chevron-left"></i></div>
+            </div>
+            <div class="sidebar_nav">
+
+                <!-- main  -->
+                <div class="sidebar_menu">
+                    <p class="title">Main</p>
+                    <ul>
+                        <li>
+                            <a href="index.html">
+                                <i class="my_icon fa-solid fa-house"></i>
+                                <span class="my_text">Dashboard</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="analytics.html">
+                                <i class="my_icon fa-solid fa-chart-line"></i>
+                                <span class="my_text">Analytics</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class='my_icon bx bxs-grid-alt'></i>
+                                <span class="my_text">Application</span>
+                                <i class="my_arrow fa-solid fa-angle-down"></i>
+                            </a>
+                            <ul class="sub_menu">
+                                <li>
+                                    <a href="email.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Email
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="chat-box.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Chat Box
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="file-manager.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            File Manager
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="contacts.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Contacts
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="todo-list.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Todo List
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="invoice.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Invoice
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="calender.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Calender
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <hr>
+
+                <!-- ui elements  -->
+                <div class="sidebar_menu">
+                    <p class="title">UI Elements</p>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <i class="my_icon fa-solid fa-shapes"></i>
+                                <span class="my_text">Widgets</span>
+                                <i class="my_arrow fa-solid fa-angle-down"></i>
+                            </a>
+                            <ul class="sub_menu">
+                                <li>
+                                    <a href="static-widgets.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Static Widgets
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="data-widgets.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Data Widgets
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class='my_icon bx bxs-cart'></i>
+                                <span class="my_text">E-commerce</span>
+                                <i class="my_arrow fa-solid fa-angle-down"></i>
+                            </a>
+                            <ul class="sub_menu">
+                                <li>
+                                    <a href="products.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Products
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="products-list.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Products list
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="products-grid.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Products Grid
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="categories.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Categories
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="products-detail.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Products Detail
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="add-new-products.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Add a new Product
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="order.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Order
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="transaction.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Transaction
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="my_icon fa-brands fa-elementor"></i>
+                                <span class="my_text">Components</span>
+                                <i class="my_arrow fa-solid fa-angle-down"></i>
+                            </a>
+                            <ul class="sub_menu">
+                                <li>
+                                    <a href="alert.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Alerts
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="accordion.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Accordions
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="avatar.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Avatar
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="badge.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Badges
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="button.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Buttons
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="card.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Cards
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="carousel.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Carousel
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="dropdown.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Dropdown
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="image.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Image
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="list-group.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            List Group
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="media-object.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Media Objects
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="modal.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Modals
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="navbar.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Navbar
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="pagination.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Pagination
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="ratings.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Ratings
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="tooltip.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Tooltip
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="progress.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Progress
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="spinner.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Spinner
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="notification.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Notifications
+                                        </span>
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class='my_icon bx bxs-book-content'></i>
+                                <span class="my_text">Contents</span>
+                                <i class="my_arrow fa-solid fa-angle-down"></i>
+                            </a>
+                            <ul class="sub_menu">
+                                <li>
+                                    <a href="grid-system.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Grid system
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="typography.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Typography
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="text-utilities.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Text Utilities
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="my_icon fa-solid fa-icons"></i>
+                                <span class="my_text">Icons</span>
+                                <i class="my_arrow fa-solid fa-angle-down"></i>
+                            </a>
+                            <ul class="sub_menu">
+                                <li>
+                                    <a href="line-icons.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Line Icons
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="box-icons.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Box Icons
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <hr>
+
+                <!-- Forms & Table  -->
+                <div class="sidebar_menu">
+                    <p class="title">Forms & Table</p>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <i class="my_icon fa-solid fa-file-waveform"></i>
+                                <span class="my_text">Forms</span>
+                                <i class="my_arrow fa-solid fa-angle-down"></i>
+                            </a>
+                            <ul class="sub_menu">
+                                <li>
+                                    <a href="form-element.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Form Element
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="input-groups.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Input Groups
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="form-layouts.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Form Layouts
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="form-validation.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Form Validation
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="form-wizard.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Form Wizard
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="text-editor.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Text Editor
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="file-upload.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            File Upload
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="date-picker.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Date Pickers
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="select.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Select
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class='my_icon bx bx-table'></i>
+                                <span class="my_text">Tables</span>
+                                <i class="my_arrow fa-solid fa-angle-down"></i>
+                            </a>
+                            <ul class="sub_menu">
+                                <li>
+                                    <a href="basic-table.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Basic Table
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="data-table.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Data Table
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <hr>
+
+                <!-- Pages  -->
+                <div class="sidebar_menu">
+                    <p class="title">Pages</p>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <i class="my_icon fa-solid fa-lock"></i>
+                                <span class="my_text">Authentication</span>
+                                <i class="my_arrow fa-solid fa-angle-down"></i>
+                            </a>
+                            <ul class="sub_menu">
+                                <li>
+                                    <a href="signin.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Sign In
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="signup.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Sign Up
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="signin-with-header-footer.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Sign In with Header & Footer
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="signup-with-header-footer.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Sign up with Header & Footer
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="forget-password.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            forget Password
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="reset-password.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Reset Password
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="lock-screen.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Lock Screen
+                                        </span>
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="userprofile.html">
+                                <i class="my_icon fa-solid fa-user"></i>
+                                <span class="my_text">User Profile</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="settings.html">
+                                <i class="my_icon fa-solid fa-gear"></i>
+                                <span class="my_text">Settings</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="timeline.html">
+                                <i class="my_icon fa-solid fa-timeline"></i>
+                                <span class="my_text">Timeline</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="my_icon fa-solid fa-triangle-exclamation"></i>
+                                <span class="my_text">Error</span>
+                                <i class="my_arrow fa-solid fa-angle-down"></i>
+                            </a>
+                            <ul class="sub_menu">
+                                <li>
+                                    <a href="error-404.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            404 Error
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="error-500.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            500 Error
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="coming-soon.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Coming soon
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="black-page.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Blank Page
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="faq.html">
+                                <i class="my_icon fa-solid fa-circle-question"></i>
+                                <span class="my_text">FAQ</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="pricing.html">
+                                <i class="my_icon fa-solid fa-hand-holding-dollar"></i>
+                                <span class="my_text">Pricing</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <hr>
+
+                <!-- Chart & Maps -->
+                <div class="sidebar_menu">
+                    <p class="title">Charts & Maps</p>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <i class="my_icon  fa-solid fa-chart-pie"></i>
+                                <span class="my_text">Charts</span>
+                                <i class="my_arrow fa-solid fa-angle-down"></i>
+                            </a>
+                            <ul class="sub_menu">
+                                <li>
+                                    <a href="apex-chart.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Apex Chart
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="chart-js.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Chart Js
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="high-charts.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            HighCharts
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="my_icon fa-solid fa-earth-europe"></i>
+                                <span class="my_text">Maps</span>
+                                <i class="my_arrow fa-solid fa-angle-down"></i>
+                            </a>
+                            <ul class="sub_menu">
+                                <li>
+                                    <a href="google-maps.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Google Maps
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="vector-maps.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Vector Maps
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <hr>
+
+                <!-- Others -->
+                <div class="sidebar_menu">
+                    <p class="title">Others</p>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <i class="my_icon fa-solid fa-burger"></i>
+                                <span class="my_text">Menu Labels</span>
+                            </a>
+
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="my_icon fa-regular fa-newspaper"></i>
+                                <span class="my_text">Documentation</span>
+                            </a>
+
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="my_icon fa-solid fa-circle-info"></i>
+                                <span class="my_text">Support</span>
+                            </a>
+
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- #################################################
+        ########### sidebar area section End ###############
+        ####################################################### -->
+
+
+
+
+        <!-- #################################################
+        ########### main content area start ###############
+        ####################################################### -->
+        <div class="main-content">
+
+            <div class="main-section">
+                <nav aria-label="breadcrumb ">
+                    <ol class="breadcrumb my-3 py-2 px-2">
+                        <li class="breadcrumb-item"><a href="#">Settings</a></li>
+
+                    </ol>
+                </nav>
+
+            </div>
+        </div>
+        <!-- #################################################
+        ########### main content area End ###############
+        ####################################################### -->
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <!-- chart js files import  -->
+    <script src="js/chart.js"></script>
+
+    <!-- jquery file import  -->
+    <script src="js/jquery.min.js"></script>
+
+    <!-- bootstrap js file import  -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- custom js file import  -->
+    <script src="js/app.js"></script>
+
+
+
+
+</body>
+
+</html>

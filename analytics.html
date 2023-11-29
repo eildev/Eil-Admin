@@ -1,0 +1,2130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sidebar</title>
+    <!-- font awesome icon cdn links -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+
+    <!-- box icon cdn links -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- <link rel="stylesheet" href="css/bootstrap.icon.css"> -->
+
+    <!-- chart js file import  -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- bootstrap css files import -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- custom css files import -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="main-container">
+
+        <!-- #################################################
+        ########### Navbar section area start ###############
+        ####################################################### -->
+        <div class="navbar bg-light text-dark">
+            <div class="d-flex justify-content-between align-items-center w-100">
+                <div class="h-full">
+                    <span id="sidebar-toggle" class="d-lg-none  d-block">
+                        <i class="fa-solid fa-bars"></i>
+                        <!-- <i class="bi bi-list"></i> -->
+                    </span>
+                </div>
+                <div class="navbar-content">
+
+
+                    <div class="d-flex align-items-center">
+                        <!-- <div class="dropdown d-inline-block d-lg-none ms-2">
+                            <button type="button" class="btn header-item noti-icon waves-effect"
+                                id="page-header-search-dropdown" data-bs-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
+                                <i class="fa-solid fa-magnifying-glass text-black "></i>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0"
+                                aria-labelledby="page-header-search-dropdown">
+                                <form class="p-3">
+                                    <div class="mb-3 m-0">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" placeholder="Search ...">
+                                            <div class="input-group-append">
+                                                <button class="btn btn-primary" type="submit">
+                                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div> -->
+
+                        <!-- search icon box  -->
+
+                        <div class="search-bar">
+                            <div class="search-icon">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </div>
+                            <div class="search-input">
+                                <input type="search" placeholder="Search" id="myInputSearch" />
+                            </div>
+                            <button class="search_btn">Search</button>
+                        </div>
+                        <!-- <div class="dropdown d-none d-sm-inline-block">
+                            <button type="button" class="btn header-item waves-effect" data-bs-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0 bg-transparent border-0 "
+                                aria-labelledby="page-header-search-dropdown">
+                                <form class="p-3">
+                                    <div class="mb-3 m-0">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" placeholder="Search ...">
+                                            <div class="input-group-append">
+                                                <button class="btn btn-info text-white " type="submit">
+                                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div> -->
+
+
+                        <!-- language  -->
+                        <div class="dropdown d-none d-sm-inline-block">
+                            <button type="button" class="btn header-item waves-effect" data-bs-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                <img class="" src="img/flags/us.jpg" alt="Header Language" height="16">
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-end">
+
+                                <!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                    <img src="img/flags/spain.jpg" alt="user-image" class="me-1" height="12">
+                                    <span class="align-middle">Spanish</span>
+                                </a>
+
+                                <!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                    <img src="img/flags/germany.jpg" alt="user-image" class="me-1" height="12">
+                                    <span class="align-middle">German</span>
+                                </a>
+
+                                <!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                    <img src="img/flags/italy.jpg" alt="user-image" class="me-1" height="12">
+                                    <span class="align-middle">Italian</span>
+                                </a>
+
+                                <!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                    <img src="img/flags/russia.jpg" alt="user-image" class="me-1" height="12">
+                                    <span class="align-middle">Russian</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- app  -->
+                        <div class="dropdown d-none d-lg-inline-block ms-1">
+                            <button type="button" class="btn header-item noti-icon waves-effect"
+                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class='bx bx-grid-alt'></i>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end">
+                                <div class="px-lg-2 py-3">
+                                    <div class="row mb-3 gy-3">
+                                        <div class="col-4 dropdown-item-icon">
+                                            <div class="d-flex flex-column justify-content-center align-items-center ">
+                                                <i class="fa-brands fa-github"></i>
+                                                <span>Github</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 dropdown-item-icon">
+                                            <div class="d-flex flex-column justify-content-center align-items-center">
+                                                <i class="fa-brands fa-facebook"></i>
+                                                <span>Facebook</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 dropdown-item-icon">
+                                            <div class="d-flex flex-column justify-content-center align-items-center">
+                                                <i class="fa-brands fa-github"></i>
+                                                <span>Github</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4 dropdown-item-icon">
+                                            <div class="d-flex flex-column justify-content-center  align-items-center ">
+                                                <i class="fa-brands fa-whatsapp"></i>
+                                                <span>Whatsapp</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 dropdown-item-icon">
+                                            <div class="d-flex flex-column justify-content-center align-items-center">
+                                                <i class="fa-brands fa-github"></i>
+                                                <span>Github</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 dropdown-item-icon">
+                                            <div class="d-flex flex-column justify-content-center align-items-center">
+                                                <i class="fa-brands fa-github"></i>
+                                                <span>Github</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- <div class="px-lg-2">
+                            <div class="row g-0">
+                                <div class="col-4">
+                                    <a class="dropdown-item" href="#">
+                                        <i class="fa-brands fa-github"></i>
+                                        <span>GitHub</span>
+                                    </a>
+                                </div>
+                                <div class="col-4">>
+                                    <a class="dropdown-item" href="#">
+                                        <img src="img/brands/bitbucket.png" alt="bitbucket">
+                                        <span>Bitbucket</span>
+                                    </a>
+                                </div>
+                                <div class="col-4">>
+                                    <a class="dropdown-icon-item" href="#">
+                                        <img src="img/brands/dribbble.png" alt="dribbble">
+                                        <span>Dribbble</span>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="row g-0">
+                                <div class="col-4">>
+                                    <a class="dropdown-icon-item" href="#">
+                                        <img src="img/brands/dropbox.png" alt="dropbox">
+                                        <span>Dropbox</span>
+                                    </a>
+                                </div>
+                                <div class="col-4">>
+                                    <a class="dropdown-icon-item" href="#">
+                                        <img src="img/brands/mail_chimp.png" alt="mail_chimp">
+                                        <span>Mail Chimp</span>
+                                    </a>
+                                </div>
+                                <div class="col-4">>
+                                    <a class="dropdown-icon-item" href="#">
+                                        <img src="img/brands/slack.png" alt="slack">
+                                        <span>Slack</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div> -->
+
+                        <!-- <div class="dropdown d-none d-lg-inline-block ms-1">
+                            <button type="button" class="btn header-item noti-icon waves-effect"
+                                data-toggle="fullscreen">
+                                <i class="ri-fullscreen-line"></i>
+                            </button>
+                        </div> -->
+
+                        <!-- notification  -->
+                        <div class="dropdown d-inline-block">
+                            <button type="button" class="btn header-item noti-icon waves-effect"
+                                id="page-header-notifications-dropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fa-solid fa-bell fs-5"></i>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0"
+                                aria-labelledby="page-header-notifications-dropdown">
+                                <div class="p-3">
+                                    <div class="row align-items-center">
+                                        <div class="col">
+                                            <h6 class="m-0"> Notifications </h6>
+                                        </div>
+                                        <div class="col-auto">
+                                            <a href="#!" class="small"> View All</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="px-3">
+                                    <div class="notification-item">
+                                        <a href="" class="text-reset notification-item">
+                                            <div class="d-flex">
+                                                <div class="me-3">
+                                                    <i
+                                                        class="fa-solid fa-cart-shopping bg-info text-white p-2 rounded-circle"></i>
+                                                </div>
+                                                <div class="flex-1">
+                                                    <h6 class="mb-1">Your order is placed</h6>
+                                                    <div class="font-size-12 text-muted">
+                                                        <p class="mb-1">If several languages coalesce the grammar</p>
+                                                        <p class="mb-0"><i class="mdi mdi-clock-outline"></i> 3 min ago
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <hr>
+                                    <div class="notification-item">
+                                        <a href="" class="text-reset notification-item">
+                                            <div class="d-flex">
+                                                <img src="img/user.png" height="30px"
+                                                    class="me-3 rounded-circle avatar-xs" alt="user-pic">
+                                                <div class="flex-1">
+                                                    <h6 class="mb-1">James Lemire</h6>
+                                                    <div class="font-size-12 text-muted">
+                                                        <p class="mb-1">It will seem like simplified English.</p>
+                                                        <p class="mb-0"><i class="mdi mdi-clock-outline"></i> 1 hours
+                                                            ago
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <hr>
+                                    <div class="notification-item mb-3">
+                                        <a href="" class="text-reset notification-item">
+                                            <div class="d-flex">
+                                                <div class="avatar-xs me-3">
+                                                    <i
+                                                        class="fa-solid fa-circle-check bg-primary text-white p-2 rounded-circle"></i>
+                                                </div>
+                                                <div class="flex-1">
+                                                    <h6 class="mb-1">Your item is shipped</h6>
+                                                    <div class="font-size-12 text-muted">
+                                                        <p class="mb-1">If several languages coalesce the grammar</p>
+                                                        <p class="mb-0"><i class="mdi mdi-clock-outline"></i> 3 min ago
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="p-2 border-top">
+                                    <div class="d-grid">
+                                        <a class="btn btn-sm btn-link font-size-14 text-center"
+                                            href="javascript:void(0)">
+                                            <i class="mdi mdi-arrow-right-circle me-1"></i> View More..
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <!-- user  -->
+                        <div class="dropdown d-inline-block user-dropdown">
+                            <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown"
+                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <img class="rounded-circle header-profile-user" src="img/user.png" height="40px"
+                                    alt="Header Avatar">
+                                <span class="d-none d-xl-inline-block ms-1">Olivia</span>
+                                <i class="fa-solid fa-chevron-down d-none d-xl-inline-block"></i>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-end">
+                                <!-- item-->
+                                <a class="dropdown-item" href="#"><i class="ri-user-line align-middle me-1"></i>
+                                    Profile</a>
+                                <a class="dropdown-item" href="#"><i class="ri-wallet-2-line align-middle me-1"></i> My
+                                    Wallet</a>
+                                <a class="dropdown-item d-block" href="#"><span
+                                        class="badge bg-success float-end mt-1">11</span><i
+                                        class="ri-settings-2-line align-middle me-1"></i> Settings</a>
+                                <a class="dropdown-item" href="#"><i class="ri-lock-unlock-line align-middle me-1"></i>
+                                    Lock
+                                    screen</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item text-danger" href="#"><i
+                                        class="ri-shut-down-line align-middle me-1 text-danger"></i> Logout</a>
+                            </div>
+                        </div>
+
+                        <!-- <div class="dropdown d-inline-block">
+                            <button type="button" class="btn header-item noti-icon right-bar-toggle waves-effect">
+                                <i class="ri-settings-2-line"></i>
+                            </button>
+                        </div> -->
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- #################################################
+        ########### Navbar section area End ###############
+        ####################################################### -->
+
+
+        <!-- #################################################
+        ########### Sidebar area start ###############
+        ####################################################### -->
+        <div class="sidebar">
+            <div id="sidebar_logo">
+                <span> <i class="fa-solid fa-chart-simple"></i></span>
+                <h4> WB</h4>
+            </div>
+            <!-- <span id="toggle2"><i class="fa-solid fa-bars"></i></span> -->
+            <div class="menu_btn">
+                <div id="sidebar-toggle2"><i class="fa-solid fa-chevron-left"></i></div>
+            </div>
+            <div class="sidebar_nav">
+
+                <!-- main  -->
+                <div class="sidebar_menu">
+                    <p class="title">Main</p>
+                    <ul>
+                        <li>
+                            <a href="index.html">
+                                <i class="my_icon fa-solid fa-house"></i>
+                                <span class="my_text">Dashboard</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="analytics.html">
+                                <i class="my_icon fa-solid fa-chart-line"></i>
+                                <span class="my_text">Analytics</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class='my_icon bx bxs-grid-alt'></i>
+                                <span class="my_text">Application</span>
+                                <i class="my_arrow fa-solid fa-angle-down"></i>
+                            </a>
+                            <ul class="sub_menu">
+                                <li>
+                                    <a href="email.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Email
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="chat-box.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Chat Box
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="file-manager.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            File Manager
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="contacts.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Contacts
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="todo-list.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Todo List
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="invoice.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Invoice
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="calender.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Calender
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <hr>
+
+                <!-- ui elements  -->
+                <div class="sidebar_menu">
+                    <p class="title">UI Elements</p>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <i class="my_icon fa-solid fa-shapes"></i>
+                                <span class="my_text">Widgets</span>
+                                <i class="my_arrow fa-solid fa-angle-down"></i>
+                            </a>
+                            <ul class="sub_menu">
+                                <li>
+                                    <a href="static-widgets.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Static Widgets
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="data-widgets.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Data Widgets
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class='my_icon bx bxs-cart'></i>
+                                <span class="my_text">E-commerce</span>
+                                <i class="my_arrow fa-solid fa-angle-down"></i>
+                            </a>
+                            <ul class="sub_menu">
+                                <li>
+                                    <a href="products.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Products
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="products-list.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Products list
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="products-grid.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Products Grid
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="categories.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Categories
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="products-detail.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Products Detail
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="add-new-products.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Add a new Product
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="order.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Order
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="transaction.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Transaction
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="my_icon fa-brands fa-elementor"></i>
+                                <span class="my_text">Components</span>
+                                <i class="my_arrow fa-solid fa-angle-down"></i>
+                            </a>
+                            <ul class="sub_menu">
+                                <li>
+                                    <a href="alert.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Alerts
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="accordion.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Accordions
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="avatar.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Avatar
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="badge.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Badges
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="button.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Buttons
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="card.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Cards
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="carousel.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Carousel
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="dropdown.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Dropdown
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="image.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Image
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="list-group.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            List Group
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="media-object.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Media Objects
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="modal.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Modals
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="navbar.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Navbar
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="pagination.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Pagination
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="ratings.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Ratings
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="tooltip.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Tooltip
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="progress.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Progress
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="spinner.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Spinner
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="notification.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Notifications
+                                        </span>
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class='my_icon bx bxs-book-content'></i>
+                                <span class="my_text">Contents</span>
+                                <i class="my_arrow fa-solid fa-angle-down"></i>
+                            </a>
+                            <ul class="sub_menu">
+                                <li>
+                                    <a href="grid-system.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Grid system
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="typography.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Typography
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="text-utilities.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Text Utilities
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="my_icon fa-solid fa-icons"></i>
+                                <span class="my_text">Icons</span>
+                                <i class="my_arrow fa-solid fa-angle-down"></i>
+                            </a>
+                            <ul class="sub_menu">
+                                <li>
+                                    <a href="line-icons.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Line Icons
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="box-icons.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Box Icons
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <hr>
+
+                <!-- Forms & Table  -->
+                <div class="sidebar_menu">
+                    <p class="title">Forms & Table</p>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <i class="my_icon fa-solid fa-file-waveform"></i>
+                                <span class="my_text">Forms</span>
+                                <i class="my_arrow fa-solid fa-angle-down"></i>
+                            </a>
+                            <ul class="sub_menu">
+                                <li>
+                                    <a href="form-element.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Form Element
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="input-groups.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Input Groups
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="form-layouts.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Form Layouts
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="form-validation.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Form Validation
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="form-wizard.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Form Wizard
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="text-editor.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Text Editor
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="file-upload.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            File Upload
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="date-picker.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Date Pickers
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="select.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Select
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class='my_icon bx bx-table'></i>
+                                <span class="my_text">Tables</span>
+                                <i class="my_arrow fa-solid fa-angle-down"></i>
+                            </a>
+                            <ul class="sub_menu">
+                                <li>
+                                    <a href="basic-table.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Basic Table
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="data-table.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Data Table
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <hr>
+
+                <!-- Pages  -->
+                <div class="sidebar_menu">
+                    <p class="title">Pages</p>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <i class="my_icon fa-solid fa-lock"></i>
+                                <span class="my_text">Authentication</span>
+                                <i class="my_arrow fa-solid fa-angle-down"></i>
+                            </a>
+                            <ul class="sub_menu">
+                                <li>
+                                    <a href="signin.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Sign In
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="signup.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Sign Up
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="signin-with-header-footer.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Sign In with Header & Footer
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="signup-with-header-footer.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Sign up with Header & Footer
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="forget-password.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            forget Password
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="reset-password.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Reset Password
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="lock-screen.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Lock Screen
+                                        </span>
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="userprofile.html">
+                                <i class="my_icon fa-solid fa-user"></i>
+                                <span class="my_text">User Profile</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="settings.html">
+                                <i class="my_icon fa-solid fa-gear"></i>
+                                <span class="my_text">Settings</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="timeline.html">
+                                <i class="my_icon fa-solid fa-timeline"></i>
+                                <span class="my_text">Timeline</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="my_icon fa-solid fa-triangle-exclamation"></i>
+                                <span class="my_text">Error</span>
+                                <i class="my_arrow fa-solid fa-angle-down"></i>
+                            </a>
+                            <ul class="sub_menu">
+                                <li>
+                                    <a href="error-404.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            404 Error
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="error-500.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            500 Error
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="coming-soon.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Coming soon
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="black-page.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Blank Page
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="faq.html">
+                                <i class="my_icon fa-solid fa-circle-question"></i>
+                                <span class="my_text">FAQ</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="pricing.html">
+                                <i class="my_icon fa-solid fa-hand-holding-dollar"></i>
+                                <span class="my_text">Pricing</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <hr>
+
+                <!-- Chart & Maps -->
+                <div class="sidebar_menu">
+                    <p class="title">Charts & Maps</p>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <i class="my_icon  fa-solid fa-chart-pie"></i>
+                                <span class="my_text">Charts</span>
+                                <i class="my_arrow fa-solid fa-angle-down"></i>
+                            </a>
+                            <ul class="sub_menu">
+                                <li>
+                                    <a href="apex-chart.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Apex Chart
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="chart-js.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Chart Js
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="high-charts.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            HighCharts
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="my_icon fa-solid fa-earth-europe"></i>
+                                <span class="my_text">Maps</span>
+                                <i class="my_arrow fa-solid fa-angle-down"></i>
+                            </a>
+                            <ul class="sub_menu">
+                                <li>
+                                    <a href="google-maps.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Google Maps
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="vector-maps.html">
+                                        <span><i class="fa-solid fa-turn-up"></i></span>
+                                        <span class="text">
+                                            Vector Maps
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <hr>
+
+                <!-- Others -->
+                <div class="sidebar_menu">
+                    <p class="title">Others</p>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <i class="my_icon fa-solid fa-burger"></i>
+                                <span class="my_text">Menu Labels</span>
+                            </a>
+
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="my_icon fa-regular fa-newspaper"></i>
+                                <span class="my_text">Documentation</span>
+                            </a>
+
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="my_icon fa-solid fa-circle-info"></i>
+                                <span class="my_text">Support</span>
+                            </a>
+
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- #################################################
+        ########### sidebar area section End ###############
+        ####################################################### -->
+
+
+
+
+        <!-- #################################################
+        ########### main content area start ###############
+        ####################################################### -->
+        <div class="main-content">
+
+            <div class="main-section">
+                <h2 class="mb-4"> Analytics</h2>
+                <div class="row gx-5 gy-5 mb-4">
+                    <div class="col-md-3">
+                        <div class="analytics-card p-3">
+                            <div>
+                                <h2>419K</h2>
+                                <!-- <p>View <span>2.9% <i class="fa-solid fa-arrow-trend-up"></i></span></p> -->
+                                <h5>Revenue</h5>
+                            </div>
+                            <div class="analytics-icon-content">
+                                <span><i class="fa-solid fa-chart-area"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="analytics-card p-3">
+                            <div>
+                                <h2>200K</h2>
+                                <!-- <p>Earn <span>6.7% <i class="fa-solid fa-arrow-trend-up"></i></span></p> -->
+                                <h5>Average Order Value</h5>
+                            </div>
+                            <div class="analytics-icon-content">
+                                <span><i class="fa-solid fa-money-check-dollar"></i></span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="analytics-card p-3">
+                            <div>
+                                <h2>419</h2>
+                                <!-- <p>Sale <span>5.6% <i class="fa-solid fa-arrow-trend-up"></i></span></p> -->
+                                <h5>Conversion Rate</h5>
+                            </div>
+                            <div class="analytics-icon-content">
+                                <span><i class="fa-solid fa-chart-line"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="analytics-card p-3">
+                            <div>
+                                <h2>700</h2>
+                                <!-- <p>Products <span>8.8%</span></p> -->
+                                <h5>Number of Transactions</h5>
+                            </div>
+                            <div class="analytics-icon-content">
+                                <span><i class="fa-solid fa-cart-shopping"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row g-5">
+                    <div class="col-lg-6">
+                        <div class="chart-container">
+                            <div class="d-flex justify-content-between  align-items-center my-3">
+                                <h5>Total Revenue</h5>
+                                <p class="badge bg-success">Active</p>
+                            </div>
+                            <canvas id="barChart2" style="height: 100%; width: 100%;"></canvas>
+                            <script>
+
+                                const barChart2 = document.getElementById('barChart2');
+
+                                new Chart(barChart2, {
+                                    type: 'bar',
+                                    data: {
+                                        labels: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+                                        datasets: [{
+                                            label: 'weekly report',
+                                            data: [65, 59, 80, 81, 56, 55, 40],
+                                            backgroundColor: [
+                                                'rgba(255, 99, 132, 0.2)',
+                                                'rgba(255, 159, 64, 0.2)',
+                                                'rgba(255, 205, 86, 0.2)',
+                                                'rgba(75, 192, 192, 0.2)',
+                                                'rgba(54, 162, 235, 0.2)',
+                                                'rgba(153, 102, 255, 0.2)',
+                                                'rgba(201, 203, 207, 0.2)'
+                                            ],
+                                            borderColor: [
+                                                'rgb(255, 99, 132)',
+                                                'rgb(255, 159, 64)',
+                                                'rgb(255, 205, 86)',
+                                                'rgb(75, 192, 192)',
+                                                'rgb(54, 162, 235)',
+                                                'rgb(153, 102, 255)',
+                                                'rgb(201, 203, 207)'
+                                            ],
+                                            borderWidth: 1
+                                        }]
+                                    },
+                                    options: {
+                                        scales: {
+                                            y: {
+                                                beginAtZero: true
+                                            }
+                                        }
+                                    }
+                                });
+                            </script>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="chart-container">
+                            <div class="d-flex justify-content-between  align-items-center my-3">
+                                <h5>Monthly Orders Value</h5>
+                                <p class="badge bg-success">Active</p>
+                            </div>
+
+
+                            <canvas id="polarChart" style="height: 100%; width: 100%;"></canvas>
+                            <script>
+
+                                const polarChart = document.getElementById('polarChart');
+
+                                new Chart(polarChart, {
+                                    type: 'polarArea',
+                                    data: {
+                                        labels: [
+                                            'Red',
+                                            'Green',
+                                            'Yellow',
+                                            'Grey',
+                                            'Blue'
+                                        ],
+                                        datasets: [{
+                                            label: 'My First Dataset',
+                                            data: [11, 16, 7, 3, 14],
+                                            backgroundColor: [
+                                                'rgb(255, 99, 132)',
+                                                'rgb(75, 192, 192)',
+                                                'rgb(255, 205, 86)',
+                                                'rgb(201, 203, 207)',
+                                                'rgb(54, 162, 235)'
+                                            ]
+                                        }]
+                                    }
+                                });
+                            </script>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row g-3 my-3">
+                    <div class="col-lg-8">
+                        <div class="chart-container">
+                            <div class="d-flex justify-content-between  align-items-center my-3">
+                                <h5>Monthly Conversion Rate</h5>
+                                <p class="badge bg-success">Active</p>
+                            </div>
+
+                            <div>
+                                <canvas id="bubbleChart" style="height: 100%; width: 100%;"></canvas>
+                                <script>
+
+                                    const bubbleChart = document.getElementById('bubbleChart');
+
+                                    new Chart(bubbleChart, {
+                                        type: 'bubble',
+                                        data: {
+                                            datasets: [{
+                                                label: 'First Dataset',
+                                                data: [{
+                                                    x: 20,
+                                                    y: 30,
+                                                    r: 10
+                                                }, {
+                                                    x: 40,
+                                                    y: 10,
+                                                    r: 10
+                                                },
+                                                {
+                                                    x: 50,
+                                                    y: 40,
+                                                    r: 10
+                                                },
+                                                {
+                                                    x: 30,
+                                                    y: 20,
+                                                    r: 10
+                                                },
+                                                {
+                                                    x: 35,
+                                                    y: 30,
+                                                    r: 10
+                                                }
+                                                ],
+                                                backgroundColor: 'rgb(255, 99, 132)'
+                                            }]
+                                        },
+                                    });
+                                </script>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="chart-container">
+                            <div class="d-flex justify-content-between  align-items-center my-3">
+                                <h5>Monthly Transactions Value</h5>
+                                <p class="badge bg-success">Active</p>
+                            </div>
+
+                            <div>
+                                <Canvas id="doughnutChart2" style="height: 100%; width: 100%;"></Canvas>
+                                <script>
+                                    const doughnutChart2 = document.getElementById('doughnutChart2');
+
+                                    new Chart(doughnutChart2, {
+                                        type: 'doughnut',
+                                        data: {
+                                            labels: [
+                                                'January',
+                                                'February',
+                                                'March',
+                                                "April",
+                                                "May",
+                                                "June"
+                                            ],
+                                            datasets: [{
+                                                label: 'My First Dataset',
+                                                data: ["20000", "21000", "22000", "18000", "24000", "17000",],
+                                                backgroundColor: [
+                                                    'rgb(255, 99, 132)',
+                                                    'rgb(54, 162, 235)',
+                                                    'rgb(255, 205, 86)',
+                                                    'rgb(0,128,0)',
+                                                    'rgb(255,165,0)',
+                                                    'rgb(143,0,255)'
+                                                ],
+                                                hoverOffset: 10
+                                            }]
+                                        }
+                                    })
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="row my-3">
+                    <div class="col-12">
+                        <div class="chart-container">
+                            <div class="d-flex justify-content-between  align-items-center my-3">
+                                <h5>Traffic Sources this month</h5>
+                                <p class="badge bg-success">Active</p>
+                            </div>
+
+                            <div>
+                                <Canvas id="lineChart2" style="height: 100%; width: 100%;"></Canvas>
+                                <script>
+                                    const lineChart2 = document.getElementById('lineChart2');
+
+                                    new Chart(lineChart2, {
+                                        type: 'line',
+                                        data: {
+                                            labels: ['Organic Search', 'Direct Traffic', 'Referral Traffic', 'Social Media Traffic'],
+                                            datasets: [{
+                                                label: 'October 2022 Traffic Source',
+                                                data: [68, 34, 24, 10],
+                                                fill: false,
+                                                borderColor: 'rgb(75, 192, 192)',
+                                                tension: 0.1
+                                            }]
+                                        }
+                                    })
+                                </script>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row my-3">
+                    <div class="col-md-7">
+                        <div class="chart-container">
+                            <div class="d-flex justify-content-between  align-items-center my-3">
+                                <h5>Traffic Overview</h5>
+                                <p class="badge bg-success">Active</p>
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table table-striped ">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Month</th>
+                                            <th scope="col">Total Visits</th>
+                                            <th scope="col">Unique Visitors</th>
+                                            <th scope="col">Pages/Visit</th>
+                                            <th scope="col">Avg. Visit Duration</th>
+                                            <th scope="col">Bounce Rate</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>January</td>
+                                            <td>2900</td>
+                                            <td>1500</td>
+                                            <td>2.04</td>
+                                            <td>00:01:11</td>
+                                            <td>65.19</td>
+                                        </tr>
+                                        <tr>
+                                            <td>February</td>
+                                            <td>3200</td>
+                                            <td>1600</td>
+                                            <td>2.12</td>
+                                            <td>00:01:13</td>
+                                            <td>64.87</td>
+                                        </tr>
+                                        <tr>
+                                            <td>March</td>
+                                            <td>3500</td>
+                                            <td>1750</td>
+                                            <td>2.20</td>
+                                            <td>00:01:15</td>
+                                            <td>64.55</td>
+                                        </tr>
+                                        <tr>
+                                            <td>April</td>
+                                            <td>3800</td>
+                                            <td>1900</td>
+                                            <td>2.28</td>
+                                            <td>00:01:17</td>
+                                            <td>64.23</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-5">
+                        <div class="chart-container">
+
+                            <div class="d-flex justify-content-between  align-items-center my-3">
+                                <h5>Email Click-Through Rate (CTR)</h5>
+                                <p class="badge bg-success">Active</p>
+                            </div>
+
+                            <div>
+                                <canvas id="bubbleChart2" style="height: 100%; width: 100%;"></canvas>
+                                <script>
+
+                                    const bubbleChart2 = document.getElementById('bubbleChart2');
+
+                                    new Chart(bubbleChart2, {
+                                        type: 'bubble',
+                                        data: {
+                                            datasets: [{
+                                                label: 'CTR',
+                                                data: [{
+                                                    x: 20,
+                                                    y: 30,
+                                                    r: 10
+                                                }, {
+                                                    x: 40,
+                                                    y: 10,
+                                                    r: 10
+                                                },
+                                                {
+                                                    x: 50,
+                                                    y: 40,
+                                                    r: 10
+                                                },
+                                                {
+                                                    x: 30,
+                                                    y: 20,
+                                                    r: 10
+                                                },
+                                                {
+                                                    x: 35,
+                                                    y: 30,
+                                                    r: 10
+                                                },
+
+                                                {
+                                                    x: 25,
+                                                    y: 10,
+                                                    r: 10
+                                                },
+                                                {
+                                                    x: 45,
+                                                    y: 30,
+                                                    r: 10
+                                                },
+                                                {
+                                                    x: 27,
+                                                    y: 35,
+                                                    r: 10
+                                                }
+                                                ],
+                                                backgroundColor: 'rgb(255, 99, 132)'
+                                            }]
+                                        },
+                                    });
+                                </script>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="row my-3">
+
+                    <div class="col-md-6">
+                        <div class="chart-container">
+
+                            <div class="d-flex justify-content-between  align-items-center my-3">
+                                <h5>Social Media Engagement</h5>
+                                <p class="badge bg-success">Active</p>
+                            </div>
+
+                            <div>
+                                <Canvas id="lineChart3" style="height: 100%; width: 100%;"></Canvas>
+                                <script>
+                                    const lineChart3 = document.getElementById('lineChart3');
+
+                                    new Chart(lineChart3, {
+                                        type: 'line',
+                                        data: {
+                                            labels: ['Instagram', 'Facebook', 'Twitter', 'LinkedIn'],
+                                            datasets: [{
+                                                label: 'October 2022 Social Media Engagement',
+                                                data: [24, 65, 46, 10],
+                                                fill: false,
+                                                borderColor: 'rgb(75, 192, 192)',
+                                                tension: 0.1
+                                            }]
+                                        }
+                                    })
+                                </script>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="chart-container">
+
+                            <div class="d-flex justify-content-between  align-items-center my-3">
+                                <h5>Paid Advertising Performance</h5>
+                                <p class="badge bg-success">Active</p>
+                            </div>
+
+                            <div>
+                                <Canvas id="pieChart2" style="height: 100%; width: 100%;"></Canvas>
+                                <script>
+                                    const pieChart2 = document.getElementById('pieChart2');
+
+                                    new Chart(pieChart2, {
+                                        type: 'pie',
+                                        data: {
+                                            labels: [
+                                                'Impressions',
+                                                'Clicks',
+                                                'CTR',
+                                                'CPC',
+                                                'Conversions',
+                                                'CPA',
+                                                'ROAS'
+                                            ],
+                                            datasets: [{
+                                                label: 'Paid Advertising Performance',
+                                                data: [89, 2, 3, 1, 2, 1, 2],
+                                                backgroundColor: [
+                                                    'rgb(255, 99, 132)',
+                                                    'rgb(54, 162, 235)',
+                                                    'rgb(255, 205, 86)',
+                                                    'rgb(0,128,0)',
+                                                    'rgb(255,165,0)',
+                                                    'rgb(143,0,255)',
+                                                    'rgb(255,192,203)',
+                                                ],
+                                                hoverOffset: 4
+                                            }]
+                                        }
+                                    })
+                                </script>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row my-3">
+                    <div class="col-md-7">
+                        <div class="chart-container">
+                            <div class="d-flex justify-content-between  align-items-center my-3">
+                                <h5>Customer Lifetime Value</h5>
+                                <p class="badge bg-success">Active</p>
+                            </div>
+
+                            <div>
+                                <table class="table">
+                                    <thead>
+                                        <tr style="text-align: left;">
+
+                                            <th>Industry</th>
+                                            <th>Average </th>
+                                            <th>Frequency</th>
+                                            <th>Customer Lifetime</th>
+                                            <th>Profit Margin</th>
+                                            <th>CLV</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+
+                                            <td>Retail</td>
+                                            <td>50</td>
+                                            <td>6</td>
+                                            <td>5</td>
+                                            <td>0.20</td>
+                                            <td>3000</td>
+                                        </tr>
+                                        <tr>
+
+                                            <td>E-commerce</td>
+                                            <td>30</td>
+                                            <td>12</td>
+                                            <td>3</td>
+                                            <td>0.15</td>
+                                            <td>600</td>
+                                        </tr>
+                                        <tr>
+
+                                            <td>SaaS</td>
+                                            <td>100</td>
+                                            <td>12</td>
+                                            <td>5</td>
+                                            <td>0.70</td>
+                                            <td>4200</td>
+                                        </tr>
+                                        <tr>
+
+                                            <td>Professional Services</td>
+                                            <td>1000</td>
+                                            <td>1</td>
+                                            <td>10</td>
+                                            <td>0.50</td>
+                                            <td>50000</td>
+                                        </tr>
+                                        <tr>
+
+                                            <td>Telecommunications</td>
+                                            <td>50</td>
+                                            <td>12</td>
+                                            <td>2</td>
+                                            <td>0.30</td>
+                                            <td>360</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="chart-container">
+                            <div class="d-flex justify-content-between  align-items-center my-3">
+                                <h5>Repeat Customer Rate</h5>
+                                <p class="badge bg-success">Active</p>
+                            </div>
+
+                            <div>
+                                <canvas id="barChart3" style="height: 100%; width: 100%;"></canvas>
+                                <script>
+
+                                    const barChart3 = document.getElementById('barChart3');
+
+                                    new Chart(barChart3, {
+                                        type: 'bar',
+                                        data: {
+                                            labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+                                            datasets: [{
+                                                label: 'monthly Report',
+                                                data: [65, 59, 80, 81, 56, 55, 40],
+                                                backgroundColor: [
+                                                    'rgba(255, 99, 132, 0.2)',
+                                                    'rgba(255, 159, 64, 0.2)',
+                                                    'rgba(255, 205, 86, 0.2)',
+                                                    'rgba(75, 192, 192, 0.2)',
+                                                    'rgba(54, 162, 235, 0.2)',
+                                                    'rgba(153, 102, 255, 0.2)',
+                                                    'rgba(201, 203, 207, 0.2)'
+                                                ],
+                                                borderColor: [
+                                                    'rgb(255, 99, 132)',
+                                                    'rgb(255, 159, 64)',
+                                                    'rgb(255, 205, 86)',
+                                                    'rgb(75, 192, 192)',
+                                                    'rgb(54, 162, 235)',
+                                                    'rgb(153, 102, 255)',
+                                                    'rgb(201, 203, 207)'
+                                                ],
+                                                borderWidth: 1
+                                            }]
+                                        },
+                                        options: {
+                                            indexAxis: 'y',
+                                        }
+                                    });
+                                </script>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row my-3">
+
+                    <div class="col-md-5">
+                        <div class="chart-container">
+                            <div class="d-flex justify-content-between  align-items-center my-3">
+                                <h5>Order Fulfillment Rate</h5>
+                                <p class="badge bg-success">Active</p>
+                            </div>
+
+                            <div>
+                                <Canvas id="doughnutChart3" style="height: 100%; width: 100%;"></Canvas>
+                                <script>
+                                    const doughnutChart3 = document.getElementById('doughnutChart3');
+
+                                    new Chart(doughnutChart3, {
+                                        type: 'doughnut',
+                                        data: {
+                                            labels: [
+                                                'Order Fulfillment Rate',
+                                                'Order not fulfilled',
+                                            ],
+                                            datasets: [{
+                                                label: 'Order Fulfillment Rate',
+                                                data: ["70", "30"],
+                                                backgroundColor: [
+                                                    'rgb(255, 99, 132)',
+                                                    'rgb(54, 162, 235)',
+                                                ],
+                                                hoverOffset: 10
+                                            }]
+                                        }
+                                    })
+                                </script>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-7">
+                        <div class="chart-container">
+                            <div class="d-flex justify-content-between  align-items-center my-3">
+                                <h5>Net Promoter Score (NPS)</h5>
+                                <p class="badge bg-success">Active</p>
+                            </div>
+
+                            <canvas id="barChart4" style="height: 100%; width: 100%;"></canvas>
+                            <script>
+
+                                const barChart4 = document.getElementById('barChart4');
+
+                                new Chart(barChart4, {
+                                    type: 'bar',
+                                    data: {
+                                        labels: ['Electronics', 'Apparel', 'Home goods', 'Beauty', 'Grocery'],
+                                        datasets: [{
+                                            label: 'NPS for top categories',
+                                            data: [62, 59, 80, 81, 55],
+                                            backgroundColor: [
+                                                'rgba(255, 99, 132, 0.2)',
+                                                'rgba(255, 159, 64, 0.2)',
+                                                'rgba(255, 205, 86, 0.2)',
+                                                'rgba(75, 192, 192, 0.2)',
+                                                'rgba(54, 162, 235, 0.2)'
+                                            ],
+                                            borderColor: [
+                                                'rgb(255, 99, 132)',
+                                                'rgb(255, 159, 64)',
+                                                'rgb(255, 205, 86)',
+                                                'rgb(75, 192, 192)',
+                                                'rgb(54, 162, 235)'
+                                            ],
+                                            borderWidth: 1
+                                        }]
+                                    },
+                                    options: {
+                                        scales: {
+                                            y: {
+                                                beginAtZero: true
+                                            }
+                                        }
+                                    }
+                                });
+                            </script>
+
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+
+                <div class="row my-3">
+
+                    <div class="col-md-7">
+                        <div class="chart-container">
+                            <div class="d-flex justify-content-between  align-items-center my-3">
+                                <h5>Customer Support Response Time</h5>
+                                <p class="badge bg-success">Active</p>
+                            </div>
+
+                            <div>
+                                <canvas id="bubbleChart3" style="height: 100%; width: 100%;"></canvas>
+                                <script>
+
+                                    const bubbleChart3 = document.getElementById('bubbleChart3');
+
+                                    new Chart(bubbleChart3, {
+                                        type: 'bubble',
+                                        data: {
+                                            datasets: [{
+                                                label: 'CTR',
+                                                data: [{
+                                                    x: 20,
+                                                    y: 30,
+                                                    r: 10
+                                                }, {
+                                                    x: 40,
+                                                    y: 10,
+                                                    r: 10
+                                                },
+                                                {
+                                                    x: 50,
+                                                    y: 40,
+                                                    r: 10
+                                                },
+                                                {
+                                                    x: 30,
+                                                    y: 20,
+                                                    r: 10
+                                                },
+                                                {
+                                                    x: 35,
+                                                    y: 30,
+                                                    r: 10
+                                                },
+
+                                                {
+                                                    x: 25,
+                                                    y: 10,
+                                                    r: 10
+                                                },
+                                                {
+                                                    x: 45,
+                                                    y: 30,
+                                                    r: 10
+                                                },
+                                                {
+                                                    x: 27,
+                                                    y: 35,
+                                                    r: 10
+                                                }
+                                                ],
+                                                backgroundColor: 'rgb(255, 99, 132)'
+                                            }]
+                                        },
+                                    });
+                                </script>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="chart-container">
+                            <div class="d-flex justify-content-between  align-items-center my-3">
+                                <h5>Product Return Rate</h5>
+                                <p class="badge bg-success">Active</p>
+                            </div>
+
+                            <div>
+                                <canvas id="barChart5" style="height: 100%; width: 100%;"></canvas>
+                                <script>
+
+                                    const barChart5 = document.getElementById('barChart5');
+
+                                    new Chart(barChart5, {
+                                        type: 'bar',
+                                        data: {
+                                            labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+                                            datasets: [{
+                                                label: 'Monthly PRR Report',
+                                                data: [65, 59, 80, 81, 56, 55, 40],
+                                                backgroundColor: [
+                                                    'rgba(255, 99, 132, 0.2)',
+                                                    'rgba(255, 159, 64, 0.2)',
+                                                    'rgba(255, 205, 86, 0.2)',
+                                                    'rgba(75, 192, 192, 0.2)',
+                                                    'rgba(54, 162, 235, 0.2)',
+                                                    'rgba(153, 102, 255, 0.2)',
+                                                    'rgba(201, 203, 207, 0.2)'
+                                                ],
+                                                borderColor: [
+                                                    'rgb(255, 99, 132)',
+                                                    'rgb(255, 159, 64)',
+                                                    'rgb(255, 205, 86)',
+                                                    'rgb(75, 192, 192)',
+                                                    'rgb(54, 162, 235)',
+                                                    'rgb(153, 102, 255)',
+                                                    'rgb(201, 203, 207)'
+                                                ],
+                                                borderWidth: 1
+                                            }]
+                                        },
+                                        options: {
+                                            indexAxis: 'y',
+                                        }
+                                    });
+                                </script>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="row my-3">
+                    <div class="col-md-5">
+                        <div class="chart-container">
+                            <div class="d-flex justify-content-between  align-items-center my-3">
+                                <h5>Customer Reviews and Feedback</h5>
+                                <p class="badge bg-success">Active</p>
+                            </div>
+
+                            <div class="row gy-2 ">
+                                <div class="col-12 d-flex align-items-center ">
+                                    <div class=" ">
+                                        <img class="img-fluid rounded" src="img/user.png" style=" width: 60px;" alt="">
+                                    </div>
+                                    <div class="ms-3">
+                                        <span class="text-success fs-6 "> <i class="fa-solid fa-quote-left"></i></span>
+                                        <h6 class="ms-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex,
+                                            possimus?</h6>
+                                        <span class="ms-2 text-warning ">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star-half-stroke"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col-12 d-flex align-items-center ">
+                                    <div class=" ">
+                                        <img class="img-fluid rounded" src="img/user.png" style=" width: 60px;" alt="">
+                                    </div>
+                                    <div class="ms-3">
+                                        <span class="text-success fs-6 "> <i class="fa-solid fa-quote-left"></i></span>
+                                        <h6 class="ms-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex,
+                                            possimus?</h6>
+                                        <span class="ms-2 text-warning ">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star-half-stroke"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col-12 d-flex align-items-center ">
+                                    <div class=" ">
+                                        <img class="img-fluid rounded" src="img/user.png" style=" width: 60px;" alt="">
+                                    </div>
+                                    <div class="ms-3">
+                                        <span class="text-success fs-6 "> <i class="fa-solid fa-quote-left"></i></span>
+                                        <h6 class="ms-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex,
+                                            possimus?</h6>
+                                        <span class="ms-2 text-warning ">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star-half-stroke"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-7">
+                        <div class="chart-container">
+                            <div class="d-flex justify-content-between  align-items-center my-3">
+                                <h5>Customer Acquisition Cost</h5>
+                                <p class="badge bg-success">Active</p>
+                            </div>
+
+                            <div>
+                                <Canvas id="lineChart4" style="height: 100%; width: 100%;"></Canvas>
+                                <script>
+                                    const lineChart4 = document.getElementById('lineChart4');
+
+                                    new Chart(lineChart4, {
+                                        type: 'line',
+                                        data: {
+                                            labels: ['Organic Search', 'Direct Traffic', 'Referral Traffic', 'Social Media Traffic'],
+                                            datasets: [{
+                                                label: 'Customer Acquisition Cost',
+                                                data: [68, 34, 24, 10],
+                                                fill: false,
+                                                borderColor: 'rgb(75, 192, 192)',
+                                                tension: 0.1
+                                            }]
+                                        }
+                                    })
+                                </script>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+
+        </div>
+        <!-- #################################################
+        ########### main content area End ###############
+        ####################################################### -->
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <!-- chart js files import  -->
+    <script src="js/chart.js"></script>
+
+    <!-- jquery file import  -->
+    <script src="js/jquery.min.js"></script>
+
+    <!-- bootstrap js file import  -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- custom js file import  -->
+    <script src="js/app.js"></script>
+
+
+
+
+</body>
+
+</html>
