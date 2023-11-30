@@ -286,26 +286,28 @@ const dataFetching = (mainContainerId, data, fixColumn) => {
     // Create a new card element
     const content = document.createElement('div');
     content.className = fixColumn;
-    content.innerHTML = `
-  
-  
-    <div class="card">
-        <div class="overflow-hidden" style="height: 220px; width: 100%">
-            <img src="${card.img}" class="card-img-top object-fit-cover w-100"
-                alt="...">
-        </div>
-        <div class="card-body">
-            <h5 class="card-title">${card.name}</h5>
-            <p class="card-text mb-2">${card.description}</p>
-            <div class="d-flex justify-content-between align-items-center">
-             <a href="#" class="btn btn-primary">Add to Cart</a>
-            <h4 class="text-primary">$${card.price}</h4>
-          </div>
-        </div>
-    </div>
-    `;
+    content.innerHTML = innerHtmlElement;
 
     // Append the card element to the container
     rowContainer.appendChild(cardElement);
   });
 }
+
+
+
+// `
+//     <div class="card">
+//         <div class="overflow-hidden" style="height: 220px; width: 100%">
+//             <img src="${card.img}" class="card-img-top object-fit-cover w-100"
+//                 alt="...">
+//         </div>
+//         <div class="card-body">
+//             <h5 class="card-title">${card.name}</h5>
+//             <p class="card-text mb-2">${card.description}</p>
+//             <div class="d-flex justify-content-between align-items-center">
+//              <a href="#" class="btn btn-primary">Add to Cart</a>
+//             <h4 class="text-primary">$${card.price}</h4>
+//           </div>
+//         </div>
+//     </div>
+//     `;
