@@ -1192,6 +1192,24 @@
                                             tension: 0.1
                                         }]
                                     },
+                                    options: {
+                                        devicePixelRatio: 2,
+                                        elements: {
+                                            point: {
+                                                borderWidth: 10,
+                                            }
+                                        },
+                                        animations: {
+                                            tension: {
+                                                duration: 1000,
+                                                easing: 'easeInQuad',
+                                                from: 1,
+                                                to: 0,
+                                                loop: true,
+                                            }
+                                        }
+
+                                    }
                                 });
                             </script>
                         </div>
@@ -1220,6 +1238,17 @@
                                             ],
                                             hoverOffset: 4
                                         }]
+                                    },
+                                    options: {
+                                        animations: {
+                                            tension: {
+                                                duration: 1000,
+                                                easing: 'linear',
+                                                from: 1,
+                                                to: 0,
+                                                loop: true,
+                                            }
+                                        }
                                     }
                                 });
                             </script>
@@ -1234,6 +1263,9 @@
                             <script>
 
                                 const barChart = document.getElementById('barChart');
+
+
+
 
                                 new Chart(barChart, {
                                     type: 'bar',
@@ -1269,7 +1301,8 @@
                                                 beginAtZero: true
                                             }
                                         }
-                                    }
+                                    },
+
                                 });
                             </script>
 
@@ -1282,6 +1315,25 @@
                             <canvas id="dough_chart" style="height: 100%; width: 100%;"></canvas>
                             <script>
                                 const doughChart = document.getElementById('dough_chart');
+
+
+                                // const image = new Image();
+                                // image.src = 'img/user.png';
+
+                                // const plugin = {
+                                //     id: 'customCanvasBackgroundImage',
+                                //     beforeDraw: (chart) => {
+                                //         if (image.complete) {
+                                //             const ctx = chart.ctx;
+                                //             const { top, left, width, height } = chart.chartArea;
+                                //             const x = left + width / 2 - image.width / 2;
+                                //             const y = top + height / 2 - image.height / 2;
+                                //             ctx.drawImage(image, x, y);
+                                //         } else {
+                                //             image.onload = () => chart.draw();
+                                //         }
+                                //     }
+                                // };
 
                                 new Chart(doughChart, {
                                     type: 'doughnut',
@@ -1300,8 +1352,10 @@
                                                 'rgb(255, 205, 86)'
                                             ],
                                             hoverOffset: 4
-                                        }]
-                                    }
+                                        }],
+
+                                    },
+                                    // plugins: [plugin],
                                 });
                             </script>
                         </div>
