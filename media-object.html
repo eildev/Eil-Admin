@@ -1163,60 +1163,166 @@
                         <li class="breadcrumb-item"><a href="#">Components</a></li>
                         <li class="breadcrumb-item active" aria-current="page">Media Object</li>
                     </ol>
+
                 </nav>
 
-
-                <div class="row">
-                    <div class="col-12">
-                        <div class="media">
-                            <img class="mr-3 img-fluid " style="height: 64px;" src="img/user.png"
-                                alt="Generic placeholder image">
-                            <div class="media-body">
-                                <h5 class="mt-0">Media heading</h5>
-                                Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante
-                                sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce
-                                condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-                            </div>
+                <div class="row my-3 ">
+                    <div class="col">
+                        <div class="mb-2">
+                            <h4 class="text-dark">Media Objects</h4>
                         </div>
-                    </div>
-                </div>
 
-                <div class="row">
-                    <div class="col-12">
-                        <div class="media">
-                            <img class="mr-3" style="height: 64px;" src="img/user.png" alt="Generic placeholder image">
-                            <div class="media-body">
-                                <h5 class="mt-0">Media heading</h5>
-                                Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante
-                                sollicitudin.
-                                Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum
-                                nunc
-                                ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                        <div class="row gx-2 gy-4">
 
-                                <div class="media mt-3">
-                                    <a class="pr-3" href="#">
-                                        <img style="height: 64px;" src="img/user.png" alt="Generic placeholder image">
-                                    </a>
-                                    <div class="media-body">
-                                        <h5 class="mt-0">Media heading</h5>
-                                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante
-                                        sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra
-                                        turpis.
-                                        Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis
-                                        in
-                                        faucibus.
+                            <div class="col-12 bg-box px-4 py-3 rounded">
+
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="mb-4">
+                                            <h5 class="text-dark">Simple Example of Media object</h5>
+                                            <p>The media object helps build complex and repetitive components where some
+                                                media
+                                                is positioned alongside content that doesn’t wrap around said media.
+                                                Plus, it
+                                                does this with only two required classes thanks to flexbox.</p>
+                                            <p>Below is an example of a single media object. Only two classes are
+                                                required—the wrapping <kbd>.media</kbd> and the <kbd>.media-body</kbd>
+                                                around your content.
+                                                Optional padding and margin can be controlled through spacing utilities.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col px-5">
+                                        <div class="media bg-white rounded" style="height: 100px;">
+                                            <img class="img-fluid rounded-start h-100 object-fit-contain "
+                                                src="img/user.png" alt="Generic placeholder image">
+                                            <div class="media-body mx-3 my-3">
+                                                <h5 class="media-title">Media heading</h5>
+                                                <p>
+                                                    Cras sit amet nibh libero, in gravida nulla. Nulla vel metus
+                                                    scelerisque
+                                                    ante
+                                                    sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus
+                                                    viverra
+                                                    turpis. Fusce
+                                                    condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue
+                                                    felis
+                                                    in
+                                                    faucibus.
+                                                </p>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+
+
+
+                            <div class="col-12 bg-box px-4 py-3 rounded">
+
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="mb-4">
+                                            <h5 class="text-dark">Nesting</h5>
+                                            <p>Media objects can be infinitely nested, though we suggest you stop at
+                                                some point. Place nested <kbd>.media</kbd> within the
+                                                <kbd>.media-body</kbd> of a parent media object.
+                                            </p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col px-5">
+                                        <div class="media bg-white rounded">
+                                            <img src="img/user2.jpg" class="me-3" style="height: 70px" alt="...">
+                                            <div class="media-body">
+                                                <h5 class="mt-0 media-title">Media heading</h5>
+                                                <p>Standing on the frontline when the bombs start to fall. Heaven is
+                                                    jealous of our love, angels are crying from up above. Can't replace
+                                                    you with a million rings. Boy, when you're with me I'll give you a
+                                                    taste. There’s no going back. Before you met me I was alright but
+                                                    things were kinda heavy. Heavy is the head that wears the crown.</p>
+
+                                                <div class="media mt-3">
+                                                    <a class="me-3" href="#">
+                                                        <img src="img/user3.jpg" style="height: 70px" alt="...">
+                                                    </a>
+                                                    <div class="media-body">
+                                                        <h5 class="mt-0 media-title">Media heading</h5>
+                                                        <p>Greetings loved ones let's take a journey. Yes, we make
+                                                            angels cry, raining down on earth from up above. Give you
+                                                            something good to celebrate. I used to bite my tongue and
+                                                            hold my breath. I'm ma get your heart racing in my
+                                                            skin-tight jeans. As I march alone to a different beat.
+                                                            Summer after high school when we first met. You're so
+                                                            hypnotizing, could you be the devil? Could you be an angel?
+                                                            It's time to bring out the big balloons. Thought that I was
+                                                            the exception. Bikinis, zucchinis, Martinis, no weenies.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="col-12 bg-box px-4 py-3 rounded">
+
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="mb-4">
+                                            <h5 class="text-dark">Nesting</h5>
+                                            <p>Media objects can be infinitely nested, though we suggest you stop at
+                                                some point. Place nested <kbd>.media</kbd> within the
+                                                <kbd>.media-body</kbd> of a parent media object.
+                                            </p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col px-5">
+                                        <div class="media">
+                                            <img class="img-fluid rounded-start h-100 object-fit-contain "
+                                                src="img/user.png" alt="Generic placeholder image">
+                                            <div class="media-body">
+                                                <h5 class="mt-0">Top-aligned media</h5>
+                                                <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus
+                                                    scelerisque ante
+                                                    sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus
+                                                    viverra turpis.
+                                                    Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia
+                                                    congue felis in
+                                                    faucibus.</p>
+                                                <p>Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu
+                                                    leo. Cum sociis
+                                                    natoque penatibus et magnis dis parturient montes, nascetur
+                                                    ridiculus mus.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
                         </div>
                     </div>
-
                 </div>
+
+
+
+
+
 
                 <div class="row">
                     <div class="col-12">
                         <div class="media">
-                            <img class="align-self-start mr-3" src="..." alt="Generic placeholder image">
+                            <img class="align-self-start me-3" src="..." alt="Generic placeholder image">
                             <div class="media-body">
                                 <h5 class="mt-0">Top-aligned media</h5>
                                 <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante
@@ -1233,7 +1339,7 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="media">
-                            <img class="align-self-center mr-3" src="..." alt="Generic placeholder image">
+                            <img class="align-self-center me-3" src="..." alt="Generic placeholder image">
                             <div class="media-body">
                                 <h5 class="mt-0">Center-aligned media</h5>
                                 <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante
@@ -1251,7 +1357,7 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="media">
-                            <img class="align-self-end mr-3" src="..." alt="Generic placeholder image">
+                            <img class="align-self-end me-3" src="..." alt="Generic placeholder image">
                             <div class="media-body">
                                 <h5 class="mt-0">Bottom-aligned media</h5>
                                 <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante
@@ -1284,7 +1390,7 @@
                     <div class="col-12">
                         <ul class="list-unstyled">
                             <li class="media">
-                                <img class="mr-3" src="..." alt="Generic placeholder image">
+                                <img class="me-3" src="..." alt="Generic placeholder image">
                                 <div class="media-body">
                                     <h5 class="mt-0 mb-1">List-based media object</h5>
                                     Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante
@@ -1294,7 +1400,7 @@
                                 </div>
                             </li>
                             <li class="media my-4">
-                                <img class="mr-3" src="..." alt="Generic placeholder image">
+                                <img class="me-3" src="..." alt="Generic placeholder image">
                                 <div class="media-body">
                                     <h5 class="mt-0 mb-1">List-based media object</h5>
                                     Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante
@@ -1304,7 +1410,7 @@
                                 </div>
                             </li>
                             <li class="media">
-                                <img class="mr-3" src="..." alt="Generic placeholder image">
+                                <img class="me-3" src="..." alt="Generic placeholder image">
                                 <div class="media-body">
                                     <h5 class="mt-0 mb-1">List-based media object</h5>
                                     Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante

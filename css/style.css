@@ -302,7 +302,23 @@ canvas {
     border-left: 5px solid var(--bs-bg-color);
 }
 
-/* text color  */
+/* media Object  */
+
+.media {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: start;
+    align-items: flex-start;
+}
+
+.media-body {
+    -ms-flex: 1;
+    flex: 1
+}
+
+.media-title {
+    color: var(--bs-dark);
+}
 
 
 
